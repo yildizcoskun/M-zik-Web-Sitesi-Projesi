@@ -1,0 +1,160 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* İçeriği videonun önüne koymak için */
+}
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #1db954;
+}
+
+.hero {
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.add-bar {
+  margin-top: 20px;
+}
+.playlist-card {
+  position: relative; /* Silme butonu için */
+}
+
+.remove-playlist {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #ff5555;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.playlist-card:hover .remove-playlist {
+  opacity: 1;
+}
+
+.remove-playlist:hover {
+  background: #ff3333;
+}
+.add-bar input {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+}
+
+.add-bar button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4b2e94;
+  color: white;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-bar button:hover {
+  background-color: #58148f;
+}
+
+.playlists {
+  padding: 15px;
+}
+
+.playlist-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.playlist-card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  width: 150px;
+}
+
+.playlist-card:hover {
+  transform: translateY(-5px);
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #222;
+  color: white;
+  padding: 1px;
+}
